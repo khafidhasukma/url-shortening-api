@@ -4,16 +4,18 @@
     <section id="banner">
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 text-center text-md-start px-3 px-md-0">
             <h1 class="fw-700 title">
               More than just <br />
               shorter links
             </h1>
             <p class="desc fw-500 my-3 lh">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
-            <button class="btn-started rounded-pill border-0 fw-700">Get Started</button>
+            <div class="mt-4">
+              <a href="#shorten" class="btn-started rounded-pill border-0 fw-700">Get Started</a>
+            </div>
           </div>
-          <div class="col-12 col-md-6">
-            <img src="/assets/img/illustration-working.svg" alt="" />
+          <div class="col-12 col-md-6 order-first order-md-last text-center text-md-start">
+            <img src="/assets/img/illustration-working.svg" class="ilustration-img" alt="" />
           </div>
         </div>
       </div>
@@ -23,7 +25,7 @@
     <!-- shorten link -->
     <div class="container">
       <section id="shorten">
-        <div class="input d-flex gap-2 justify-content-center">
+        <div class="input d-flex flex-column flex-md-row gap-2 justify-content-center">
           <input type="text" class="form-control" placeholder="Shorten a link here..." />
           <button class="btn-started rounded-3 border-0 fw-700">Shorten It!</button>
         </div>
@@ -40,9 +42,9 @@
             <p class="w-50 text-secondary desc lh">Track how your links are performing across the web with our advanced statistics dashboard.</p>
           </div>
         </div>
-        <div class="row row-cols-3">
-          <div v-for="(value, key) in statistics" :key="key" class="col contents">
-            <div class="ms-4 icon rounded-circle">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div v-for="(value, key) in statistics" :key="key" class="col contents text-center text-md-start">
+            <div class="ms-md-4 icon mx-auto rounded-circle">
               <img :src="value.image" height="40" alt="" />
             </div>
             <div class="bg-white py-5 px-4 statistics rounded">
@@ -51,7 +53,8 @@
             </div>
           </div>
         </div>
-        <hr class="hr-content" />
+        <hr class="hr-content d-none d-md-block" />
+        <div class="vl d-sm-none"></div>
       </div>
     </section>
     <!-- end statistics -->
@@ -59,7 +62,7 @@
     <!-- boost -->
     <section id="boost">
       <h1 class="text-white fw-700 mb-4">Boost your links today</h1>
-      <button class="btn-started rounded-pill border-0 fw-700">Get Started</button>
+      <a href="#shorten" class="btn-started rounded-pill border-0 fw-700">Get Started</a>
     </section>
     <!-- end boost -->
   </div>
@@ -155,6 +158,79 @@ hr.hr-content {
 }
 .lh {
   line-height: 2rem !important;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .statistics {
+    height: auto;
+  }
+  .title {
+    font-size: 2.5rem !important;
+  }
+  .desc {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 1.125rem;
+  }
+  p {
+    font-size: 0.875rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  #banner {
+    height: max-content;
+  }
+  .ilustration-img {
+    width: 450px;
+    margin-bottom: 1rem;
+  }
+
+  #shorten {
+    margin-top: 8rem !important;
+  }
+  .form-control {
+    width: 100% !important;
+  }
+  .contents:nth-child(3) {
+    margin-top: 2rem;
+  }
+  .contents:nth-child(2) {
+    margin-top: 0;
+  }
+  .w-50 {
+    width: 100% !important;
+  }
+  #statistics {
+    padding: 8rem 1rem;
+    margin-top: -90px;
+  }
+  .statistics {
+    height: auto;
+  }
+
+  .vl {
+    border-left: 6px solid var(--cyan);
+    height: 50rem;
+    position: absolute;
+    margin-top: -55rem !important;
+    right: 50%;
+  }
+  .contents {
+    position: relative;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .contents:nth-child(3) {
+    margin-top: 4rem;
+  }
+  .contents:nth-child(2) {
+    margin-top: 4rem;
+  }
 }
 </style>
 

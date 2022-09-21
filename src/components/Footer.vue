@@ -1,32 +1,32 @@
 <template>
   <div>
-    <footer>
+    <footer class="text-center text-md-start">
       <div class="container">
         <div class="row">
-          <div class="col-3">
+          <div class="col-12 col-md-3 mb-5 mb-md-0">
             <img src="/assets/img/logo.svg" class="img-logo" width="130" alt="" />
           </div>
-          <div class="col-2">
-            <h6 class="mb-4 fw-700">Features</h6>
-            <a href="#" class="d-block mb-3">Link Shortening</a>
-            <a href="#" class="d-block mb-3">Branded Links</a>
-            <a href="#" class="d-block mb-3">Analytics</a>
+          <div class="col-12 col-md-2 mb-4 mb-md-0">
+            <h6 class="mb-3 fw-700">Features</h6>
+            <a href="#" class="d-block mb-2">Link Shortening</a>
+            <a href="#" class="d-block mb-2">Branded Links</a>
+            <a href="#" class="d-block mb-2">Analytics</a>
           </div>
-          <div class="col-2">
-            <h6 class="mb-4 fw-700">Resources</h6>
-            <a href="#" class="d-block mb-3">Blog</a>
-            <a href="#" class="d-block mb-3">Developers</a>
-            <a href="#" class="d-block mb-3">Support</a>
+          <div class="col-12 col-md-2 mb-4 mb-md-0">
+            <h6 class="mb-3 fw-700">Resources</h6>
+            <a href="#" class="d-block mb-2">Blog</a>
+            <a href="#" class="d-block mb-2">Developers</a>
+            <a href="#" class="d-block mb-2">Support</a>
           </div>
-          <div class="col-2">
-            <h6 class="mb-4 fw-700">Company</h6>
-            <a href="#" class="d-block mb-3">About</a>
-            <a href="#" class="d-block mb-3">Our Team</a>
-            <a href="#" class="d-block mb-3">Careers</a>
-            <a href="#" class="d-block mb-3">Contact</a>
+          <div class="col-12 col-md-2 mb-4 mb-md-0">
+            <h6 class="mb-3 fw-700">Company</h6>
+            <a href="#" class="d-block mb-2">About</a>
+            <a href="#" class="d-block mb-2">Our Team</a>
+            <a href="#" class="d-block mb-2">Careers</a>
+            <a href="#" class="d-block mb-2">Contact</a>
           </div>
-          <div class="col-3">
-            <div class="d-flex gap-4">
+          <div class="col-12 col-md-3">
+            <div class="d-flex justify-content-center justify-content-md-end mt-4 mt-md-0 gap-4">
               <a href="https://www.facebook.com/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                   <path
@@ -84,5 +84,11 @@ a:hover,
 a:hover > svg path {
   color: var(--cyan) !important;
   fill: var(--cyan) !important;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .img-logo {
+    width: 100px;
+  }
 }
 </style>

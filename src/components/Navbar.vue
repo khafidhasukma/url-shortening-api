@@ -1,28 +1,29 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-white sticky-top pt-4 pb-3">
+  <nav class="navbar navbar-expand-lg bg-white sticky-top pt-4 pb-3 text-center text-md-start">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="/assets/img/logo.svg" width="130" alt="" />
+        <img src="/assets/img/logo.svg" class="logo-img" width="130" alt="" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item px-2">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item px-2 mb-2 mb-md-0">
             <a class="nav-link active" aria-current="page" href="#">Features</a>
           </li>
-          <li class="nav-item px-2">
+          <li class="nav-item px-2 mb-2 mb-md-0">
             <a class="nav-link" href="#pricing" aria-current="page">Pricing</a>
           </li>
-          <li class="nav-item px-2">
+          <li class="nav-item px-2 mb-2 mb-md-0">
             <a class="nav-link" href="#resources" aria-current="page">Resources</a>
           </li>
         </ul>
-      </div>
-      <div class="d-flex gap-2">
-        <button class="border-0 btn-login">Login</button>
-        <button class="border-0 btn-signup rounded-pill">Sign Up</button>
+        <hr />
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+          <button class="border-0 btn-login">Login</button>
+          <button class="border-0 btn-signup rounded-pill">Sign Up</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -60,6 +61,54 @@ button {
 .nav-link:hover,
 .btn-login:hover {
   color: black !important;
+}
+.navbar-toggler {
+  border: none !important;
+}
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media only screen and (max-width: 991.98px) {
+  .nav-link,
+  .btn-login {
+    color: white !important;
+  }
+  .navbar-collapse {
+    background: var(--very-dark-violet);
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+  }
+
+  hr {
+    border-top: 1px solid white !important;
+  }
+  .navbar > .container,
+  .navbar > .container-fluid,
+  .navbar > .container-lg,
+  .navbar > .container-md,
+  .navbar > .container-sm,
+  .navbar > .container-xl,
+  .navbar > .container-xxl {
+    align-items: flex-start !important;
+  }
+  .logo-img {
+    width: 100px;
+  }
+  .nav-link:focus,
+  .nav-link:active,
+  .btn-login:focus,
+  .nav-link:hover,
+  .nav-link:hover,
+  .btn-login:hover {
+    color: var(--cyan) !important;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .btn-signup {
+    width: 100%;
+  }
 }
 </style>
 
